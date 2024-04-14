@@ -1,0 +1,258 @@
+/*  Nike image slider Styles */
+
+/* Apply Arial font to the entire document */
+body {
+    font-family: Arial, sans-serif;
+    /* Set background color to a shade of light blue */
+    background-color: white;
+}
+
+/* Header Styles */
+
+  
+header {
+    background-color: transparent; /* Light gray background */
+    padding: 20px;
+    text-align: center; /* Center the content horizontally */
+  }
+
+  /*Footer*/
+  footer {
+    background-color: transparent; /* Light gray background */
+    padding: 20px;
+    text-align: center;
+    bottom: 0px; /* Center the content horizontally */
+  }
+  
+  h1 {
+    font-size: 2em; /* Set the heading to be 2 times the default font size */
+    margin-bottom: 10px; /* Add some space below the heading */
+  }
+  
+  p {
+    font-style: italic; /* Add a slight italic style for a touch of elegance */
+    color: #666; /* Text color can be a darker shade of gray */
+  }
+  
+
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 75vh;
+  position: relative;
+  margin: auto;
+  border-bottom: 20px;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 10px;
+  
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+
+.slider img {
+  display: block;
+  width: 100%;
+  max-width: 100%; 
+  height: auto; 
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
+}
+
+  
+  .prev:hover, .next:hover {
+    opacity: 1; /* Increase opacity on hover */
+  }
+  
+  .prev {
+    left: 50px; 
+  }
+  
+  .next {
+    right: 50px;
+  }
+
+
+
+/* Center align indicator */
+.indicator {
+    text-align: center;
+    margin-top: 30px;
+    color: black;
+}
+
+
+
+/* Style indicator dots */
+.indicator span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    /* Set default background color of indicator dots */
+    background-color: #aaa;
+    /* Add border radius to indicator dots */
+    border-radius: 50%;
+    /* Add margin between indicator dots */
+    margin: 0 5px;
+    /* Set cursor to pointer on hover */
+    cursor: pointer;
+    /* Add transition effect to indicator dots */
+    transition: all 0.3s ease; 
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+
+/* Style active indicator dot */
+.indicator span.active {
+    /* Change background color of active indicator dot */
+    background-color: #333;
+}
+
+
+
+/* Adjust container width for screens smaller than 768 pixels */
+@media screen and (max-width: 768px) {
+    .container {
+                width: 100%;
+    }
+}
+h2{
+  text-align: center;
+  color: green;
+}
+/* Base styles */
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%; 
+  margin: auto;
+  text-align: center;
+}
+
+.card {
+  width: calc(25% - 20px); /* 25% width for each card with 20px margin between them */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .cart {
+    width: 100%; 
+    padding: 0 10px;
+    margin: auto; 
+   
+  }
+
+  .card {
+    width: calc(50% - 20px); /* 50% width for each card with 20px margin between them on small screens */
+  }
+}
+
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.image-description {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.image-price {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.add-to-cart {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+/* CSS for the cart container */
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Align cards at the center */
+}
+
+.card {
+  width: calc(25% - 20px); /* 25% width for each card with 20px margin between them */
+  margin: 0 10px 20px; /* Adjusted margin for better spacing */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .cart-container {
+    justify-content: center; /* Align cards at the center on small screens */
+  }
+
+  .card {
+    width: calc(50% ); /* 50% width for each card with 20px margin between them on small screens */
+  }
+}

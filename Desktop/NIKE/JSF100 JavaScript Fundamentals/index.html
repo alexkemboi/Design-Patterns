@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Featured Image Slider</title>
+  <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+      <h1>An Interactive Nike Metaverse Interactive Prototype images slider feature and shopping cart</h1>
+      <p>Discover 5 iconic shoes and their describtion with just a click!</p>
+    </header>
+    
+    <!-- Slider Container -->
+    <div class="container">
+      <div class="imageDescription"></div>
+      <div class="container">
+        <div class="slider-container">
+          <div class="slider"></div>      
+          <button class="prev" onclick="prevSlide()">Previous</button>
+          <button class="next" onclick="nextSlide()">Next</button>      
+          <div class="indicator">
+            <span></span>
+          </div>
+        </div>
+
+        
+      </div>
+     
+    </div>
+    <h2>Shopping section</h2>
+    <div class="cart-container">
+      <h2>Cart items</h2>
+      <ul class="cart-list"></ul>
+    </div>
+    
+    <div class="cart" ></div> 
+    <footer>
+      <p>&copy; 2024 Nike</p>
+    </footer>
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+
+</body>
+</html>
